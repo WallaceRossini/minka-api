@@ -1,0 +1,21 @@
+{
+  "type": "postgres",
+  "port": 5432,
+  "host": "172.17.0.2",
+  "username": "postgres",
+  "password": "password",
+  "database": "minka",
+  "synchronize": true,
+  "logging": false,
+  "ssl": true,
+  "extra": {
+    "ssl": {
+      "rejectUnauthorized": false
+    }
+  },
+  "entities": ["./src/entities/*.ts"],
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
+}
